@@ -1,7 +1,7 @@
 ﻿# CMakeList.txt : CMake project for Uno, include source and define
 # project specific logic here.
 #
-cmake_minimum_required (VERSION 3.8)
+cmake_minimum_required (VERSION 3.28)
 
 # Enable Hot Reload for MSVC compilers if supported.
 if (POLICY CMP0141)
@@ -11,11 +11,10 @@ endif()
 
 project ("Uno")
 
-# Add source to this project's executable.
-add_executable (Uno "Uno.cpp" "Uno.h")
+# Add source to this project's executable
+include_directories(.)
+add_executable (Uno "src/Card.h" "src/Uno.h" "src/Uno.cpp")
 
-if (CMAKE_VERSION VERSION_GREATER 3.12)
-  set_property(TARGET Uno PROPERTY CXX_STANDARD 20)
-endif()
+set_property(TARGET Uno PROPERTY CXX_STANDARD 20)
 
 # TODO: Add tests and install targets if needed.
