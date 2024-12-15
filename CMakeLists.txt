@@ -13,7 +13,7 @@ project ("Uno")
 
 # Add source to this project's executable
 include_directories(.)
-add_executable (Uno "src/Card.h" "src/Uno.h" "src/Uno.cpp")
+add_executable (Uno "src/Card.h" "src/Uno.h" "src/Game.h" "src/Uno.cpp" "src/Game.cpp" "src/Player.cpp")
 
 set_property(TARGET Uno PROPERTY CXX_STANDARD 20)
 
